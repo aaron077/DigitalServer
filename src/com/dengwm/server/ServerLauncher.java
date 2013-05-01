@@ -34,7 +34,7 @@ public class ServerLauncher {
                 client.sendEvent("chatevent", datas);
             }
         });
-
+        
         server.start();
 
         Thread.sleep(Integer.MAX_VALUE);
