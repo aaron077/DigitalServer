@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_20"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-core-2.1.2.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-databind-2.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.1.2.jar" sourcepath="C:/Users/dengwm/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.2/jackson-core-2.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.1.2.jar" sourcepath="C:/Users/dengwm/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.2/jackson-databind-2.1.2-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jmockit-0.999.16.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="lib/netty-3.6.1.Final.jar" sourcepath="C:/Users/Administrator/.m2/repository/io/netty/netty/3.6.1.Final/netty-3.6.1.Final-sources.jar"/>
@@ -13,5 +12,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.6.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.6.4.jar"/>
 	<classpathentry kind="lib" path="lib/jxl-2.6.12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_32"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

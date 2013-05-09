@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DBServer" default="output" basedir=".">
+	<tstamp>
+	</tstamp>
+	<!---->
+	<property name="projectname" value="DigitalClient" />
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="lib.dir" value="${basedir}/lib" />
+	<property name="output.dir" value="${basedir}/target" />
+	<property name="outputlib.dir" value="${basedir}/target/lib" />
+	<property name="class.dir" value="${basedir}/classes" />
+	<property name="jarname" value="${projectname}.jar"/>  
+	<property name="clientmainclass" value="com.dengwm.client.nettyclient.DigitalClient"/>  
+	<property name="servermainclass" value="com.dengwm.server.DigitalServer"/>  
+	<property name="mainclass" value="${clientmainclass}"/> 
+	
+	<!-- 主任务 <antcall target="mail" />-->
+	<target name="output">
+		<antcall target="clean" />
+		<antcall target="init" />
+		<antcall target="build" />
+		<antcall target="copy" />
+		<antcall target="target" />
+	</target>
+
+	<!-- 定义ClassPath -->
+	<path id="project.classpath">
+		<fileset file="${lib.dir}/*.jar" />
+	</path>
+	<!-- 定义SoucePath -->
+	<path id="lifangclass.classpath">
+		<fileset dir="${class.dir}/*.class" />
+	</path>
+
+	<!-- 初始化任务, 清除目录 -->
+	<target name="clean">
+		<delete dir="${output.dir}" />
+		<delete dir="${class.dir}" />	
+	</target>
+
+	<!-- 初始化任务, 创建目录 -->
+	<target name="init" description="初始化任务, 创建目录">
+		<mkdir dir="${output.dir}" />
+		<mkdir dir="${class.dir}" />
+		<mkdir dir="${outputlib.dir}"/>
+	</target>
+
+
+	<!-- 编译Java程序  -->
+	<target name="build" description="编译 java 文件下">
+		<javac srcdir="${src.dir}" destdir="${class.dir}" debug="on" encoding="UTF-8" >
+			<classpath refid="project.classpath"/>
+		</javac>
+
+	</target>
+
+	<target name="copy" description="拷贝 属性配置文件到编译后的路径">
+		<!-- 复制生产环境的配置文件配置文件 -->
+		<copy todir="${class.dir}" overwrite="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+				<include name="**/*.ini" />
+				<include name="**/*.bat" />
+				<include name="**/*.exe" />
+			</fileset>
+		</copy>
+		<copy todir="${output.dir}" overwrite="true">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>	
+	</target>
+	
+	<!-- 3. 打包jar文件 -->  
+    <target name="target" description="打包">  
+        <copy todir="${outputlib.dir}">  
+            <fileset dir="${lib.dir}"/>  
+        </copy>  
+  
+        <!--Create a property containing all .jar files,  
+        prefix lib/, and seperated with a space-->  
+        <pathconvert property="mf.classpath" pathsep=" ">  
+            <mapper>  
+                <chainedmapper>  
+                    <!-- jar包文件只留文件名，去掉目录信息 -->  
+                    <flattenmapper/>  
+                    <!-- add lib/ prefix -->  
+                    <globmapper from="*" to="lib/*"/>  
+                </chainedmapper>  
+            </mapper>  
+            <path refid="project.classpath"/>  
+         </pathconvert>  
+  
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${class.dir}">  
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>  
+                <attribute name="Class-Path" value="${mf.classpath}"/>  
+            </manifest>  
+        </jar>  
+    </target>  
+    
+
+
+</project>
