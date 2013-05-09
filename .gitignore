@@ -2,6 +2,7 @@
 
 *.class
 #忽略目录
-classes/
-bin/
-target/
+/classes/
+/bin/
+/target/
+/server/
