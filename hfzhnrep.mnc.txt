@@ -1,0 +1,51 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   .classpath
+#	new file:   .gitignore
+#	new file:   .settings/org.eclipse.core.resources.prefs
+#	deleted:    bin/com/dengwm/bean/ChatObject.class
+#	deleted:    bin/com/dengwm/bean/ClientInfoBean.class
+#	deleted:    bin/com/dengwm/handler/ClientInfoHandler.class
+#	deleted:    bin/com/dengwm/handler/MyHandler.class
+#	deleted:    bin/com/dengwm/server/ServerLauncher$1.class
+#	deleted:    bin/com/dengwm/server/ServerLauncher.class
+#	deleted:    bin/com/dengwm/utils/CommonConstants.class
+#	new file:   build.xml
+#	new file:   server/DigitalServer.jar
+#	new file:   server/lib/hamcrest-core-1.1.jar
+#	new file:   server/lib/jackson-annotations-2.1.1.jar
+#	new file:   server/lib/jackson-core-2.1.2.jar
+#	new file:   server/lib/jackson-databind-2.1.2.jar
+#	new file:   server/lib/jmockit-0.999.16.jar
+#	new file:   server/lib/junit-4.10.jar
+#	new file:   server/lib/jxl-2.6.12.jar
+#	new file:   server/lib/netty-3.6.1.Final.jar
+#	new file:   server/lib/netty-socketio-1.0.0-SNAPSHOT.jar
+#	new file:   server/lib/slf4j-api-1.6.4.jar
+#	new file:   server/lib/slf4j-simple-1.6.6.jar
+#	new file:   src/com/dengwm/client/nettyclient/DigitalClient.java
+#	new file:   src/com/dengwm/handler/MessageServerHandler.java
+#	new file:   src/com/dengwm/server/DigitalServer.java
+#	new file:   target/DigitalClient.jar
+#	new file:   target/lib/hamcrest-core-1.1.jar
+#	new file:   target/lib/jackson-annotations-2.1.1.jar
+#	new file:   target/lib/jackson-core-2.1.2.jar
+#	new file:   target/lib/jackson-databind-2.1.2.jar
+#	new file:   target/lib/jmockit-0.999.16.jar
+#	new file:   target/lib/junit-4.10.jar
+#	new file:   target/lib/jxl-2.6.12.jar
+#	new file:   target/lib/netty-3.6.1.Final.jar
+#	new file:   target/lib/netty-socketio-1.0.0-SNAPSHOT.jar
+#	new file:   target/lib/slf4j-api-1.6.4.jar
+#	new file:   target/lib/slf4j-simple-1.6.6.jar
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	"\346\226\260\345\273\272\346\226\207\346\234\254\346\226\207\346\241\243.txt"
+
