@@ -1,0 +1,7 @@
+
+{
+  "MessageRequest" : { "bizcode" : "10001", "bizfunc" : 1 },
+  "MessageResponse" : { "bizcode" : "10001", "bizfunc" : 1,"errortype":0,"errorstring":"" },
+  "MessageBody" : {}
+}
+
